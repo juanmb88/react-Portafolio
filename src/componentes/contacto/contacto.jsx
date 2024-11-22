@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaSquareJs } from "react-icons/fa6";
 import { IoLogoCss3 } from "react-icons/io";
-import { IoIosHeart } from "react-icons/io";
+import { IoIosHeart ,IoIosArrowUp } from "react-icons/io";
 import Particles from "../materialUI/particles.tsx";
 import { useEffect, useRef } from "react";
 
@@ -43,7 +43,12 @@ const Contacto = () => {
       }
     };
   }, []);
-
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <Particles quantity={100} ease={100} size={3.0} refresh />
@@ -68,6 +73,9 @@ const Contacto = () => {
         <Div3>
           Hecho con <IoIosHeart /> 
         </Div3>
+        <BotonFlotante onClick={handleScrollToTop}>
+          <IoIosArrowUp size={24} />
+        </BotonFlotante>
       </ContenedorContacto>
     </>
   );
@@ -79,7 +87,7 @@ const ContenedorContacto = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 30vh;
   padding: 20px;
 `;
 
@@ -186,7 +194,33 @@ const Logos = styled.div`
 `;
 
 const Div3 = styled.div`
-  margin-top: 10px;
   font-size: 1rem;
   color: aliceblue;
+`;
+const BotonFlotante = styled.a`
+  position: absolute;
+  right: 20px;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(45deg, #0d0d0d, #333);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 115, 177, 0.5), 0 0 40px rgba(0, 115, 177, 0.3);
+
+  &:hover {
+    color: #00e1ff;
+    box-shadow: 0 0 30px rgba(0, 115, 177, 0.8), 0 0 60px rgba(0, 115, 177, 0.6);
+  }
+
+  @media (max-width: 460px) {
+    bottom: 10px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 `;

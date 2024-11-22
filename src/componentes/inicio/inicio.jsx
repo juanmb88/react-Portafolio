@@ -14,9 +14,8 @@ const Inicio = () => {
                         words={["FrontEnd Developer Jr", "Diseño Ux", "Diseño UI", "Web Ecommerce"]}/> 
 
         </Text>
-        
             <StyledImage
-                  src={"/image/sapiens.png"}
+                  src={"/image/sapiens.webp"}
                 />  
     </Container>
   );
@@ -24,7 +23,6 @@ const Inicio = () => {
 
 export default Inicio;
 
-///////////////////////STYLED COMPONENTS////////////////////////////////////
 
 // Animaciones
 
@@ -47,7 +45,6 @@ const slideFromRight = keyframes`
   }
 `;
 
-//FIN ANIMACIIONES
 // Estilos
 const Container = styled.section`
   display: flex;
