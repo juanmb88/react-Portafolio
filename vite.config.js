@@ -5,7 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    sourcemap: false, // Desactiva los mapas de fuente
+    sourcemap: false, // Desactiva completamente los sourcemaps
+  },
+  esbuild: {
+    sourcemap: false, // Para procesos internos de Vite
   },
   server: {
     host: true, // Permite que Railway escuche desde cualquier IP
