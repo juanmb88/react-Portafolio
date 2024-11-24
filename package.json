@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "start": "vite preview",
+    "start": "vite build && npm install -g serve && serve -s dist",
     "preview": "vite preview"
   },
   "dependencies": {
