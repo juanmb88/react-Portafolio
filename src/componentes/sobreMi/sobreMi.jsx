@@ -6,7 +6,7 @@ const SobreMi = () => {
   return (
     <>
   
-    <Container>
+    <Container id="sobre-mi">
       <H2 className=''>Sobre mi</H2>
      
         <Box1>

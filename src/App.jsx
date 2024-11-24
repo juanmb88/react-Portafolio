@@ -29,7 +29,7 @@ const AppContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   font-family: "Nunito Sans", sans-serif;
-  background-color: #1f2c1d; /* 75% opaque, i.e. 25% transparent */
+  background-color: #3c313c; /* 75% opaque, i.e. 25% transparent */
 
 
 `;

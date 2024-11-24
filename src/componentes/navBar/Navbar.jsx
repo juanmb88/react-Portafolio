@@ -12,13 +12,13 @@ const Navbar = () => {
           </NavLogo>
           <NavLinks>
                   <NavLink>
-                        <ScrollLink to="sobre-mi" smooth={true} duration={500}>
-                          Sobre mí
+                        <ScrollLink to="proyectos" smooth={true} duration={500}>
+                          Proyectos
                         </ScrollLink>
                   </NavLink>
                   <NavLink>
-                        <ScrollLink to="proyectos" smooth={true} duration={500}>
-                          Proyectos
+                        <ScrollLink to="sobre-mi" smooth={true} duration={500}>
+                          Sobre mí
                         </ScrollLink>
                   </NavLink>
                   <NavLink>

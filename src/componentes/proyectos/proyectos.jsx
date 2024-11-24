@@ -9,7 +9,7 @@ const Proyectos = () => {
     {
       title: "Listado de Pacientes",
       dateRange: "Jan 2024 - Feb 2024",
-      description: "Uso de los hook UseState para tomar datos ingresados y useEffect para darle funcionalidad de edicion del cliente ya listado Persistencia de datos usa LocalStorage.",
+      description: "Uso del hook useState para capturar los datos ingresados y useEffect para implementar la funcionalidad de edición del cliente ya listado. La persistencia de datos se realiza utilizando localStorage.",
       techs: ["React", "TailwindCSS", "Vite"],
       imageSrc: "/image/citasImagenes.webp",
       websiteUrl: "https://listado-mascotas.netlify.app/",
@@ -18,7 +18,7 @@ const Proyectos = () => {
     {
       title: "Planificador de Gastos",
       dateRange: "Mar 2023 - May 2023",
-      description: "Uso de librerias como : react-swipeable-list: crea listas deslizables que mejoran la experiencia de usuario. Ademas de, react-circular-progressbar : muestra progreso de alguna tarea en forma de barras de progreso circulares.",
+      description: "Uso de librerías como: react-swipeable-list, que crea listas deslizables para mejorar la experiencia del usuario; además de react-circular-progressbar, que muestra el progreso de una tarea en forma de barras de progreso circulares.",
       techs: ["React", "Javascripts", "HTML", "CSS"],
       imageSrc: "/image/controlGastos.webp",
       websiteUrl: "https://seguimiento-gastos.netlify.app/",
@@ -27,7 +27,7 @@ const Proyectos = () => {
     {
       title: "CriptoCotizador",
       dateRange: "Jun 2022 - Jul 2022",
-      description: "Uso y practica con Styled Components biblioteca popular para React que permite escribir estilos CSS directamente en los componentes de JavaScript. ",
+      description: "Uso y práctica con Styled Components, una biblioteca popular para React que permite escribir estilos CSS directamente en los componentes de JavaScript.",
       techs: ["React","Javascripts", "CSS", "Vite","Styled Components"],
       imageSrc: "/image/criptoImg.webp",
       websiteUrl: "https://cript0cotizador.netlify.app/",
@@ -36,7 +36,7 @@ const Proyectos = () => {
     {
       title: "Practica Profesionalizante",
       dateRange: "Dic 2021 - Mar 2022",
-      description: "Maquetado y diseño elaborado para las prácticas profesionales del Instituto TECLAB. Bajo metodología SCRUM",
+      description: "Maquetado y diseño elaborados para las prácticas profesionales del Instituto TECLAB siguiendo la metodología SCRUM",
       techs: ["HTML", "CSS", "Trello", "Figma"],
       imageSrc: "/image/lumen.webp",
       websiteUrl: "https://www.lumencor.org/",
@@ -45,8 +45,8 @@ const Proyectos = () => {
     {
       title: "Chat Collect",
       dateRange: "Jan 2024 - Feb 2024",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      techs: ["Next.js", "Typescript", "PostgreSQL", "Prisma", "TailwindCSS", "Stripe", "Shadcn UI"],
+      description: "Práctica desarrollo frontend, web estándar como HTML, CSS y JavaScript. Se emplean frameworks y bibliotecas, alojado en Netlify, una plataforma que facilita el despliegue continuo",
+      techs: ["Javascripts", "CSS", "HTML", "Bootstrap5"],
       imageSrc: "/image/portafolio02.webp",
       websiteUrl: "https://portafolio-proto02.netlify.app/",
       repoUrl: "https://github.com/repository",
@@ -54,7 +54,7 @@ const Proyectos = () => {
     {
       title: "Ecommerce con backend",
       dateRange: "Ene 2024 - Ago 2024",
-      description: "Sistema de ruteo con controladores, arquitectura en capas,patrones DAO, Repository. Manejo de sesiones y sistema de mailing.",
+      description: "Implementación de sistema de ruteo basado en controladores, diseñado bajo arquitectura en capas, patrones DAO y Repository. Gestión y desarrollo de sesiones y sistema de envío de correos(mailing).",
       techs: [ "Express", "MongoDB", "NodeJS", "CSS3", "Bootstrap", "Javascripts"],
       imageSrc: "/image/pf-backend.webp",
       websiteUrl: "https://pf-baluganojuan-production.up.railway.app/login",
@@ -69,7 +69,7 @@ const Proyectos = () => {
     <Container>
 
       <H2>Proyectos</H2>
-      <ContainerTarjetas>
+      <ContainerTarjetas id="proyectos">
         {proyectosData.map((proyecto, index) => (
           <AtroposComponent key={index} rotateXMax={20} rotateYMax={20} shadowOffset={0} activeOffset={0} shadowScale={0.5}>
             <ProductCard

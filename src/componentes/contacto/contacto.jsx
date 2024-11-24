@@ -52,18 +52,11 @@ const Contacto = () => {
   return (
     <>
       <Particles quantity={100} ease={100} size={3.0} refresh />
-      <ContenedorContacto>
-        <TextoDescarga>Descarga CV en formato PDF:</TextoDescarga>
+      <ContenedorContacto id="contacto">
+        <TextoDescarga>Descarga pdf :</TextoDescarga>
         <Boton onClick={FuncionDescargaCV}>CV</Boton>
-        <DivImgContainer>
-       {/*    <DivImgCelulares
-            ref={divImgRef}
-            src="/image/celulares.png"
-            alt="Ilustración del CV"
-          /> */}
-        </DivImgContainer>
         <DivTexto>
-          Creado con:
+          creado con:
           <Logos>
             <TbBrandReactNative color="#61dafb" />
             <FaSquareJs color="#eefa05" />
@@ -71,7 +64,7 @@ const Contacto = () => {
           </Logos>
         </DivTexto>
         <Div3>
-          Hecho con <IoIosHeart /> 
+          Hecho con <IoIosHeart  style={{ marginTop: '2px' }}/> 
         </Div3>
         <BotonFlotante onClick={handleScrollToTop}>
           <IoIosArrowUp size={24} />
@@ -143,38 +136,12 @@ const Boton = styled.a`
   background-color: #ff5733;
 }
 
-    @media (min-width: 460px) and (max-width: 900px) {
+@media (min-width: 460px) and (max-width: 900px) {
     padding: 0.5rem 1.5rem;
     font-size: 1rem;
   }
-
-  @media (max-width: 460px) {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    width: 100%;
-  }
     `;
 
-const DivImgContainer = styled.div`
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-`;
-
-/* const DivImgCelulares = styled.img`
-  height: 400px;
-  width: auto;
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: opacity 1s ease, transform 1s ease;
-
-  &.show {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`; */
 
 const DivTexto = styled.div`
   margin-top: 20px;
@@ -199,28 +166,42 @@ const Div3 = styled.div`
 `;
 const BotonFlotante = styled.a`
   position: absolute;
-  right: 20px;
-  padding: 0.75rem 2rem;
+  right: 50px;
+  padding: 0.8rem 1.2rem;
   font-size: 1.2rem;
   color: #fff;
   background: linear-gradient(45deg, #0d0d0d, #333);
   border: 2px solid transparent;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  transition: color 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: color 0.4s ease;
   box-shadow: 0 0 20px rgba(0, 115, 177, 0.5), 0 0 40px rgba(0, 115, 177, 0.3);
 
-  &:hover {
-    color: #00e1ff;
-    box-shadow: 0 0 30px rgba(0, 115, 177, 0.8), 0 0 60px rgba(0, 115, 177, 0.6);
+  &:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 115, 177, 0.8), transparent);
+  z-index: 1;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+&:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+&:hover {
+  color: #00e1ff;
+  box-shadow: 0 0 30px rgba(0, 115, 177, 0.8), 0 0 60px rgba(0, 115, 177, 0.6);
+}
+
+@media (min-width: 460px) and (max-width: 900px) {
+    font-size: 1rem;
   }
 
-  @media (max-width: 460px) {
-    bottom: 10px;
-    right: 10px;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
 `;
