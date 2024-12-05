@@ -1,13 +1,13 @@
 import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
-
+import keyframes from 'styled-components';
 const Navbar = () => {
   return (
 
     <NavContainer>
           <NavLogo>
                   <ScrollLink to="inicio" smooth={true} duration={500}>
-                    <NavLogoLink>JB</NavLogoLink>
+                    <StyledImage src="/image/LOGO.png"></StyledImage>
                   </ScrollLink>
           </NavLogo>
           <NavLinks>
@@ -33,7 +33,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
+const slideFromTop = keyframes`
+  0% {
+    opacity: -1;
+  }`
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -59,12 +62,18 @@ const NavLogo = styled.div`
  }
 `; 
 
-const NavLogoLink = styled.span`
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
+const StyledImage = styled.img`
+  width: 75px;
+  animation: ${slideFromTop} 4s linear;
+  @media (min-width: 460px) and (max-width: 900px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media (max-width: 460px) {
+    width: 150px;
+    height: 150px;
 
- 
+  }
 `;
 
 const NavLinks = styled.ul`
@@ -89,7 +98,7 @@ const NavLink = styled.li`
     cursor: pointer;
 
     &:hover {
-      color: #27498e; /* Cambia el color al pasar el cursor */
+      color: #EB5B00;
     }
   }
   @media (max-width: 460px) {

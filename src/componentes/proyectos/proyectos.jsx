@@ -60,7 +60,6 @@ const Proyectos = () => {
       websiteUrl: "https://pf-baluganojuan-production.up.railway.app/login",
       repoUrl: "https://github.com/juanmb88/PF-BaluganoJuan",
     }
-    // Agrega más proyectos según sea necesario
   ];
 
   return (
@@ -106,7 +105,7 @@ const H2 = styled.h2`
       align-items: center;
       font-size: 50px;
       font-weight:700;
-      background: linear-gradient(180deg, #16528e, #cde9f0); 
+      background: linear-gradient(180deg, #EB5B00, #ff6303); 
       background-clip: text;
       color: transparent;  
       grid-column: 1/4;

@@ -180,8 +180,8 @@ const Button = styled.a`
   font-size: 1.1rem;
   text-align: center;
 
-  &:hover {
-    background-color: #ababab;
+  &:hover {   
+    background: linear-gradient(180deg, #ff5e5b, #f9918f); 
   }
 
   @media (min-width: 460px) and (max-width: 900px) {

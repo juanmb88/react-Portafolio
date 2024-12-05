@@ -85,7 +85,7 @@ const TituloGrande = styled.h1`
 const Subtitulo = styled.h2`
   font-size: 2rem;
   text-align: center;
-  background: linear-gradient(180deg, #16528e, #cde9f0);
+  background: linear-gradient(180deg, #EB5B00, #ff7e2d);
   background-clip: text;
   color: transparent;
   margin-top: 1rem;
@@ -121,7 +121,7 @@ const Boton = styled.a`
   position: relative;
   overflow: hidden;
   transition: color 0.4s ease;
-  box-shadow: 0 0 20px rgba(0, 115, 177, 0.5), 0 0 40px rgba(0, 115, 177, 0.3);
+  box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
   
   &:before {
   content: "";
@@ -130,9 +130,9 @@ const Boton = styled.a`
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(0, 115, 177, 0.8), transparent);
+  background: linear-gradient(120deg, transparent, #eb5a0049, transparent);
   z-index: 1;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
   transform: scaleX(0);
   transform-origin: right;
 }
@@ -142,8 +142,8 @@ const Boton = styled.a`
 }
 
 &:hover {
-  color: #00e1ff;
-  box-shadow: 0 0 30px rgba(0, 115, 177, 0.8), 0 0 60px rgba(0, 115, 177, 0.6);
+  color: white;
+  box-shadow: 0 0 30px #EB5B00, 0 0 60px #EB5B00;
 }
 
 &:nth-child(2) {

@@ -59,7 +59,7 @@ const Container = styled.header`
       align-items: center;
       font-size: 50px;
       font-weight:700;
-      background: linear-gradient(180deg, #16528e, #cde9f0); 
+      background: linear-gradient(180deg, #EB5B00, #EB5B00); 
       background-clip: text;
       color: transparent;  
       grid-column: 1/4;

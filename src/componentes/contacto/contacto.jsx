@@ -53,7 +53,7 @@ const Contacto = () => {
     <>
       <Particles quantity={100} ease={100} size={3.0} refresh />
       <ContenedorContacto id="contacto">
-        <TextoDescarga>Descarga pdf :</TextoDescarga>
+        <TextoDescarga>Descarga PDF :</TextoDescarga>
         <Boton onClick={FuncionDescargaCV}>CV</Boton>
         <DivTexto>
           creado con:
@@ -103,7 +103,7 @@ const Boton = styled.a`
   position: relative;
   overflow: hidden;
   transition: color 0.4s ease;
-  box-shadow: 0 0 20px rgba(0, 115, 177, 0.5), 0 0 40px rgba(0, 115, 177, 0.3);
+  box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
   
   &:before {
   content: "";
@@ -112,7 +112,7 @@ const Boton = styled.a`
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(0, 115, 177, 0.8), transparent);
+  background: linear-gradient(120deg, transparent, #eb5a0086, transparent); 
   z-index: 1;
   transition: transform 0.5s ease;
   transform: scaleX(0);
@@ -124,8 +124,8 @@ const Boton = styled.a`
 }
 
 &:hover {
-  color: #00e1ff;
-  box-shadow: 0 0 30px rgba(0, 115, 177, 0.8), 0 0 60px rgba(0, 115, 177, 0.6);
+  color: white;
+  box-shadow: 0 0 30px rgba(245, 123, 89, 0.8), 0 0 60px rgba(227, 120, 91, 0.896);
 }
 
 &:nth-child(2) {
@@ -165,43 +165,51 @@ const Div3 = styled.div`
   color: aliceblue;
 `;
 const BotonFlotante = styled.a`
-  position: absolute;
-  right: 50px;
+  position: fixed;
+  right: 50px; 
+  bottom: 50px; 
   padding: 0.8rem 1.2rem;
   font-size: 1.2rem;
   color: #fff;
   background: linear-gradient(45deg, #0d0d0d, #333);
   border: 2px solid transparent;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   transition: color 0.4s ease;
-  box-shadow: 0 0 20px rgba(0, 115, 177, 0.5), 0 0 40px rgba(0, 115, 177, 0.3);
+  box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
 
   &:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(0, 115, 177, 0.8), transparent);
-  z-index: 1;
-  transition: transform 0.5s ease;
-  transform: scaleX(0);
-  transform-origin: right;
-}
-&:hover:before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-&:hover {
-  color: #00e1ff;
-  box-shadow: 0 0 30px rgba(0, 115, 177, 0.8), 0 0 60px rgba(0, 115, 177, 0.6);
-}
-
-@media (min-width: 460px) and (max-width: 900px) {
-    font-size: 1rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, #eb5a0073, transparent);
+    z-index: 1;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  &:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
+  &:hover {
+    color: white;
+    box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
+  }
+
+  @media (min-width: 460px) and (max-width: 900px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 460px) {
+    padding: 0.4rem 0.8rem;
+    right: 30px; 
+    bottom: 30px; 
+    border-radius: 10px;
+  }
 `;
+
