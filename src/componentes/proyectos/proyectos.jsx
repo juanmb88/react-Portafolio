@@ -147,12 +147,12 @@ const AtroposComponent = styled(Atropos)`
   place-items: center;  
 
   @media (min-width: 460px) and (max-width: 900px) {
-    background-color: #4a32d0;
+    background-color: #640D5F;
     width: 240px;
     height: 400px;
   }
   @media (max-width: 460px)  {
-    background-color: #7463d8;
+    background-color: #640D5F;
     width: 180px;
     height: 320px;
   }

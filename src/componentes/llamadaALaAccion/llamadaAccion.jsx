@@ -162,7 +162,6 @@ const Boton = styled.a`
   @media (max-width: 460px) {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    width: 100%;
   }
     `;
 

@@ -113,7 +113,6 @@ const Synopsis = styled.div`
   margin: 5px;
   font-weight: 500;
   color: #ffffff;
-  -webkit-text-stroke: .5px #5d470f;
   a {
     color: #16528e; 
     text-decoration: none;
