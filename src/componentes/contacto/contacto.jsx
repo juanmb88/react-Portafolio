@@ -141,11 +141,6 @@ const Boton = styled.a`
     font-size: 1rem;
   }
 
-  @media (max-width: 460px) {
-    position: relative;
-    right: 50%;
-  }
-
     `;
 
 

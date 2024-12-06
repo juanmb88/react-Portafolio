@@ -55,7 +55,7 @@ const Card = styled.div`
 
   @media (max-width: 460px) {
     width: 180px;
-    height: 320px;
+    height: 340px;
   }
 `;
 
@@ -141,7 +141,7 @@ const Description = styled.p`
 const TechList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
   margin: 16px 0;
 
   @media (min-width: 460px) and (max-width: 900px) {
@@ -151,7 +151,9 @@ const TechList = styled.div`
 
   @media (max-width: 460px) {
     gap: 4px;
-    margin: 8px 0;
+    margin: 0;
+    font-size: x-small;
+    color: #640D5F;
   }
 `;
 
@@ -176,12 +178,12 @@ const Button = styled.a`
   padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;
-  color: #323232;
+  color: #2d2c2c;
   font-size: 1.1rem;
   text-align: center;
 
   &:hover {   
-    background: linear-gradient(180deg, #ff5e5b, #f9918f); 
+       background: linear-gradient(180deg, #eb5a00bc, #eb5a0077); 
   }
 
   @media (min-width: 460px) and (max-width: 900px) {

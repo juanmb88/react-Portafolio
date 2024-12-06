@@ -104,7 +104,7 @@ const NavLink = styled.li`
   @media (max-width: 460px) {
    a{
     font-size: .9rem;
-    margin: 5px;
+    margin: 10px;
     padding: 1px;
    }
 

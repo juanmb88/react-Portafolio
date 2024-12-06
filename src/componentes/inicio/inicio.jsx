@@ -96,9 +96,10 @@ const Nombre = styled.p`
   font-size: 24px;
 }
   @media (max-width: 460px) {
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
     flex-direction: row;  
+    
   }
   `;
 
@@ -138,6 +139,7 @@ const StyledImage = styled.img`
   @media (max-width: 460px) {
     width: 150px;
     height: 150px;
+  
 
   }
 `;
