@@ -64,7 +64,7 @@ const Contacto = () => {
           </Logos>
         </DivTexto>
         <Div3>
-          Hecho con <IoIosHeart  style={{ marginTop: '2px' }}/> 
+          Hecho con <IoIosHeart  style={{ marginTop: '20px' }}/> 
         </Div3>
         <BotonFlotante onClick={handleScrollToTop}>
           <IoIosArrowUp size={24} />
@@ -88,10 +88,16 @@ const TextoDescarga = styled.p`
   font-size: 1.5rem;
   color: #fff;
   margin-bottom: 20px;
+  @media (min-width: 460px) and (max-width: 900px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 460px) {
+    font-size: 1rem;
+  }
 `;
 
 const Boton = styled.a`
-  padding: 0.75rem 2rem;
+  padding: 1rem 1.5rem;
   font-size: 1.2rem;
   color: #fff;
   background: linear-gradient(45deg, #0d0d0d, #333);
@@ -103,7 +109,7 @@ const Boton = styled.a`
   position: relative;
   overflow: hidden;
   transition: color 0.4s ease;
-  box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
+  box-shadow: 0 0 2px #EB5B00, 0 0 4px #EB5B00;
   
   &:before {
   content: "";
@@ -125,22 +131,20 @@ const Boton = styled.a`
 
 &:hover {
   color: white;
-  box-shadow: 0 0 30px rgba(245, 123, 89, 0.8), 0 0 60px rgba(227, 120, 91, 0.896);
+  box-shadow: 0 0 3px #ff5733, 0 0 6px #ff5733;
 }
 
-&:nth-child(2) {
-  background-color: #d44638;
-}
 
-&:nth-child(2):hover {
-  background-color: #ff5733;
-}
 
-@media (min-width: 460px) and (max-width: 900px) {
+@media (min-width: 580px) and (max-width: 900px) {
+  padding: 1.0rem 1.5rem;
+  
+  }
+
+  @media (max-width: 481px) {
     padding: 0.5rem 1.5rem;
     font-size: 1rem;
   }
-
     `;
 
 
@@ -177,7 +181,7 @@ const BotonFlotante = styled.a`
   border-radius: 10px;
   overflow: hidden;
   transition: color 0.4s ease;
-  box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
+  box-shadow: 0 0 2px #EB5B00, 0 0 4px #EB5B00;
 
   &:before {
     content: "";
@@ -200,7 +204,7 @@ const BotonFlotante = styled.a`
 
   &:hover {
     color: white;
-    box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
+    box-shadow: 0 0 2px #EB5B00, 0 0 4px #EB5B00;
   }
 
   @media (min-width: 460px) and (max-width: 900px) {

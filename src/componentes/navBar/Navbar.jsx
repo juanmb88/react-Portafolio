@@ -45,6 +45,7 @@ const NavContainer = styled.nav`
 
   @media (min-width: 460px) and (max-width: 900px) {
     flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
  
@@ -57,9 +58,12 @@ const NavLogo = styled.div`
   
   
   @media (max-width: 460px) {
-    display: none; 
-  
+    display: none;  
  }
+
+ @media (min-width: 460px) and (max-width: 900px) {
+  display: none;
+  }
 `; 
 
 const StyledImage = styled.img`

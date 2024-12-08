@@ -85,9 +85,8 @@ const TituloGrande = styled.h1`
 const Subtitulo = styled.h2`
   font-size: 2rem;
   text-align: center;
-  background: linear-gradient(180deg, #EB5B00, #ff7e2d);
   background-clip: text;
-  color: transparent;
+  color: #EB5B00;
   margin-top: 1rem;
   @media (min-width: 460px) and (max-width: 900px) {
     font-size: 1.5rem;
@@ -121,7 +120,7 @@ const Boton = styled.a`
   position: relative;
   overflow: hidden;
   transition: color 0.4s ease;
-  box-shadow: 0 0 20px #EB5B00, 0 0 40px #EB5B00;
+  box-shadow: 0 0 2px #EB5B00, 0 0 4px #EB5B00;
   
   &:before {
   content: "";
@@ -143,7 +142,7 @@ const Boton = styled.a`
 
 &:hover {
   color: white;
-  box-shadow: 0 0 30px #EB5B00, 0 0 60px #EB5B00;
+  box-shadow: 0 0 3px #EB5B00, 0 0 6px #EB5B00;
 }
 
 &:nth-child(2) {

@@ -59,9 +59,8 @@ const Container = styled.header`
       align-items: center;
       font-size: 50px;
       font-weight:700;
-      background: linear-gradient(180deg, #EB5B00, #EB5B00); 
       background-clip: text;
-      color: transparent;  
+      color: #EB5B00;  
       grid-column: 1/4;
       margin: 40px;
       
@@ -70,6 +69,14 @@ const Container = styled.header`
       margin: 10px;
       display: grid;
      }
+
+     @media (max-width: 460px)  {
+    font-size: 28px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
      `;
 
 const Box1 = styled.div`

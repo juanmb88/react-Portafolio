@@ -51,7 +51,7 @@ const Container = styled.section`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap:50px;  
+  gap:2px;  
   height: 100vh;
   `;
 
@@ -71,7 +71,6 @@ const Text = styled.div`
     font-size: 10px;
   }
   @media (max-width: 460px) {
-    font-size: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +94,7 @@ const Nombre = styled.p`
   @media (min-width: 460px) and (max-width: 900px) {
   font-size: 24px;
 }
-  @media (max-width: 460px) {
+  @media (max-width: 490px) {
     font-size: 20px;
     display: flex;
     flex-direction: row;  

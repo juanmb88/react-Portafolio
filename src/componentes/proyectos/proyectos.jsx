@@ -105,9 +105,8 @@ const H2 = styled.h2`
       align-items: center;
       font-size: 50px;
       font-weight:700;
-      background: linear-gradient(180deg, #EB5B00, #ff6303); 
       background-clip: text;
-      color: transparent;  
+      color: #EB5B00;  
       grid-column: 1/4;
       margin-left: 100px;
   
@@ -116,6 +115,9 @@ const H2 = styled.h2`
   }
   @media (max-width: 460px)  {
     font-size: 28px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
   }
   `;
 
