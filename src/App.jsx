@@ -28,7 +28,7 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Helvética", sans-serif;
   background-color: #640D5F;
 
 
