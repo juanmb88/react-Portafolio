@@ -14,7 +14,7 @@ const Inicio = () => {
 
         </Text>
             <StyledImage
-                  src={"/image/sapiens.webp"} alt={"imgPrincipal"}
+                  src={"/image/sapiens.webp"} alt={"imgPrincipal"} loading="lazy"
                 />  
     </Container>
   );
@@ -67,7 +67,7 @@ const Text = styled.div`
     margin:40px;
 }
   @media (min-width: 460px) and (max-width: 900px) {
-    font-size: 10px;
+    font-size: 12px;
   }
   @media (max-width: 460px) {
     display: flex;
@@ -75,6 +75,8 @@ const Text = styled.div`
     justify-content: center;
     align-items: start;
     margin: 20px;
+    font-size: 12px;
+
     
   }
   `;
@@ -94,7 +96,7 @@ const Nombre = styled.p`
   font-size: 24px;
 }
   @media (max-width: 490px) {
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     flex-direction: row;  
     
