@@ -7,7 +7,7 @@ const SobreMi = () => {
     <>
   
     <Container id="sobre-mi">
-      <H2 className=''>Sobre mi</H2>
+      <StyledH2  className=''>Sobre mi</StyledH2>
      
         <Box1>
             <Synopsis>
@@ -53,7 +53,7 @@ const Container = styled.header`
     
     `;
 
-    const H2 = styled.h2`
+    const StyledH2  = styled.h2`
       display: flex;
       justify-content: start;
       align-items: center;

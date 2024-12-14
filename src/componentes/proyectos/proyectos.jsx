@@ -67,7 +67,7 @@ const Proyectos = () => {
       <Particles quantity={100} ease={100} size={2.9} refresh />
     <Container>
 
-      <H2>Proyectos</H2>
+      <StyledH2 >Proyectos</StyledH2>
       <ContainerTarjetas id="proyectos">
         {proyectosData.map((proyecto, index) => (
           <AtroposComponent key={index} rotateXMax={20} rotateYMax={20} shadowOffset={0} activeOffset={0} shadowScale={0.5}>
@@ -99,7 +99,7 @@ const Container = styled.section`
 
   `;
 
-const H2 = styled.h2`
+const StyledH2  = styled.h2`
       display: flex;
       justify-content: start;
       align-items: center;
