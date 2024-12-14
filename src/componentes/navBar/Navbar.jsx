@@ -1,42 +1,46 @@
 import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
-import keyframes from 'styled-components';
+import {keyframes} from 'styled-components';
 const Navbar = () => {
   return (
-
     <NavContainer>
-          <NavLogo>
-                  <ScrollLink to="inicio" smooth={true} duration={500}>
-                    <StyledImage src="/image/LOGO.png" alt={"imgLogo"}></StyledImage>
-                  </ScrollLink>
-          </NavLogo>
-          <NavLinks>
-                  <NavLink>
-                        <ScrollLink to="proyectos" smooth={true} duration={500}>
-                          Proyectos
-                        </ScrollLink>
-                  </NavLink>
-                  <NavLink>
-                        <ScrollLink to="sobre-mi" smooth={true} duration={500}>
-                          Sobre mí
-                        </ScrollLink>
-                  </NavLink>
-                  <NavLink>
-                        <ScrollLink to="contacto" smooth={true} duration={500}>
-                          Contacto
-                        </ScrollLink>
-                  </NavLink>
-          </NavLinks>
+      <NavLogo>
+        <ScrollLink to="inicio" smooth={true} duration={500}>
+          <StyledImage src="/image/LOGO.png" alt="imgLogo" />
+        </ScrollLink>
+      </NavLogo>
+      <NavLinks>
+        <NavLink>
+          <ScrollLink to="proyectos" smooth={true} duration={500}>
+            Proyectos
+          </ScrollLink>
+        </NavLink>
+        <NavLink>
+          <ScrollLink to="sobre-mi" smooth={true} duration={500}>
+            Sobre mí
+          </ScrollLink>
+        </NavLink>
+        <NavLink>
+          <ScrollLink to="contacto" smooth={true} duration={500}>
+            Contacto
+          </ScrollLink>
+        </NavLink>
+      </NavLinks>
     </NavContainer>
-    
   );
 };
 
 export default Navbar;
 const slideFromTop = keyframes`
   0% {
-    opacity: -1;
-  }`
+    opacity: 0;
+    transform: translateY(-50px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+`;
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
