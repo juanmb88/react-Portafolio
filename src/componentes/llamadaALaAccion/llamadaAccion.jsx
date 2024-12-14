@@ -10,11 +10,11 @@ const LlamadaAccion = () => {
 
       <ColumnaDerecha>
         <ContenedorBotones>
-          <Boton href="https://www.linkedin.com/in/juanm-balugano/" target="_blank" rel="noopener noreferrer">
+          <Boton href="https://www.linkedin.com/in/juanm-balugano/" target="_blank" rel="noopener noreferrer" aria-label="Ir a mi LinkedIn">
             LinkedIn
           </Boton>
 
-          <Boton href="mailto:juanbalugano@gmail.com">
+          <Boton href="mailto:juanbalugano@gmail.com" aria-label="Enviar un correo a Juan Manuel Balugano">
             Gmail
           </Boton>
         </ContenedorBotones>

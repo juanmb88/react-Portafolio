@@ -53,8 +53,8 @@ const Contacto = () => {
     <>
       <Particles quantity={100} ease={100} size={3.0} refresh />
       <ContenedorContacto id="contacto">
-        <TextoDescarga>Descarga PDF :</TextoDescarga>
-        <Boton onClick={FuncionDescargaCV}>CV</Boton>
+        <TextoDescarga>Descarga PDF</TextoDescarga>
+        <Boton onClick={FuncionDescargaCV} aria-label="Descargar CV">CV</Boton>
         <DivTexto>
           creado con:
           <Logos>
@@ -171,6 +171,7 @@ const Div3 = styled.div`
 `;
 const BotonFlotante = styled.a`
   position: fixed;
+  will-change: transform;
   right: 50px; 
   bottom: 50px; 
   padding: 0.8rem 1.2rem;

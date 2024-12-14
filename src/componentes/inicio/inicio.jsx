@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import WordRotate from "../materialUI/word-rotate";
-/* import Atropos from 'atropos/react';
- */import 'atropos/css';
+import 'atropos/css';
 
 const Inicio = () => {
   return (
