@@ -15,7 +15,7 @@ const Inicio = () => {
 
         </Text>
             <StyledImage
-                  src={"/image/sapiens.webp"}
+                  src={"/image/sapiens.webp"} alt={"imgPrincipal"}
                 />  
     </Container>
   );

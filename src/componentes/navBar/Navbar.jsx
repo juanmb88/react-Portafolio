@@ -7,7 +7,7 @@ const Navbar = () => {
     <NavContainer>
           <NavLogo>
                   <ScrollLink to="inicio" smooth={true} duration={500}>
-                    <StyledImage src="/image/LOGO.png"></StyledImage>
+                    <StyledImage src="/image/LOGO.png" alt={"imgLogo"}></StyledImage>
                   </ScrollLink>
           </NavLogo>
           <NavLinks>
