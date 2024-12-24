@@ -85,7 +85,7 @@ const Nombre = styled.p`
   font-size: 50px;
   font-weight: 900;
   margin: 0;
-  background: linear-gradient(180deg, #EB5B00, #ff8e48);
+  background: linear-gradient(180deg, #EB5B00, #f2c3a6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   background-clip: text;

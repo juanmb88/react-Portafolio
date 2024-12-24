@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaSquareJs } from "react-icons/fa6";
-import { IoLogoCss3 } from "react-icons/io";
-import { IoIosHeart ,IoIosArrowUp } from "react-icons/io";
+import { IoLogoCss3, IoIosHeart, IoIosArrowUp } from "react-icons/io";
 import Particles from "../materialUI/particles.tsx";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { db } from "../../config/firabaseConfig.js";
+import { ref, get, set } from "firebase/database";
 
-// Componente de contacto
 const Contacto = () => {
+  const [visitCount, setVisitCount] = useState(0);
+  const divImgRef = useRef(null);
+
   const FuncionDescargaCV = () => {
     const link = document.createElement("a");
     link.href = "../../assets/cv/CV-Balugano-Juan.pdf";
@@ -15,7 +18,21 @@ const Contacto = () => {
     link.click();
   };
 
-  const divImgRef = useRef(null);
+  // Incrementar el contador de visitas
+  useEffect(() => {
+    const visitRef = ref(db, "visitCount");
+
+    get(visitRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        const currentCount = snapshot.val();
+        setVisitCount(currentCount);
+        set(visitRef, currentCount + 1);
+      } else {
+        set(visitRef, 1);
+        setVisitCount(1);
+      }
+    });
+  }, []);
 
   // Efecto para detectar scroll y aplicar la animación
   useEffect(() => {
@@ -43,20 +60,24 @@ const Contacto = () => {
       }
     };
   }, []);
+
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
   return (
     <>
       <Particles quantity={100} ease={100} size={3.0} refresh />
       <ContenedorContacto id="contacto">
         <TextoDescarga>Descarga PDF</TextoDescarga>
-        <Boton onClick={FuncionDescargaCV} aria-label="Descargar CV">CV</Boton>
+        <Boton onClick={FuncionDescargaCV} aria-label="Descargar CV">
+          CV
+        </Boton>
         <DivTexto>
-          creado con:
+          Creado con:
           <Logos>
             <TbBrandReactNative color="#61dafb" />
             <FaSquareJs color="#eefa05" />
@@ -64,7 +85,8 @@ const Contacto = () => {
           </Logos>
         </DivTexto>
         <Div3>
-          Hecho con <IoIosHeart  style={{ marginTop: '20px' }}/> 
+          Hecho con <IoIosHeart style={{ marginTop: "20px" }} /> 
+          <p>Visitas al sitio: {visitCount}</p>
         </Div3>
         <BotonFlotante onClick={handleScrollToTop}>
           <IoIosArrowUp size={24} />
@@ -73,7 +95,6 @@ const Contacto = () => {
     </>
   );
 };
-
 export default Contacto;
 const ContenedorContacto = styled.div`
   display: flex;
@@ -83,7 +104,6 @@ const ContenedorContacto = styled.div`
   height: 30vh;
   padding: 20px;
 `;
-
 const TextoDescarga = styled.p`
   font-size: 1.5rem;
   color: #fff;
@@ -95,10 +115,8 @@ const TextoDescarga = styled.p`
     font-size: 1rem;
   }
 `;
-
 const Boton = styled.a`
-  padding: 1rem 1.5rem;
-  font-size: 1.2rem;
+  padding: 1rem 1rem;
   color: #fff;
   background: linear-gradient(45deg, #0d0d0d, #333);
   border: 2px solid transparent;
@@ -107,7 +125,6 @@ const Boton = styled.a`
   text-decoration: none;
   text-align: center;
   position: relative;
-  overflow: hidden;
   transition: color 0.4s ease;
   box-shadow: 0 0 2px #EB5B00, 0 0 4px #EB5B00;
   
@@ -145,9 +162,7 @@ const Boton = styled.a`
     padding: 0.5rem 1.5rem;
     font-size: 1rem;
   }
-    `;
-
-
+`;
 const DivTexto = styled.div`
   margin-top: 20px;
   font-size: 1.2rem;
@@ -157,16 +172,13 @@ const DivTexto = styled.div`
   align-items: center;
   gap: 10px;
 `;
-
 const Logos = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 `;
-
 const Div3 = styled.div`
-  font-size: 1rem;
   color: aliceblue;
 `;
 const BotonFlotante = styled.a`
