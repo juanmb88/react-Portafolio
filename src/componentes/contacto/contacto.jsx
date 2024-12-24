@@ -3,13 +3,13 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { FaSquareJs } from "react-icons/fa6";
 import { IoLogoCss3, IoIosHeart, IoIosArrowUp } from "react-icons/io";
 import Particles from "../materialUI/particles.tsx";
-import { useEffect, useRef, useState } from "react";
-import { db } from "../../config/firabaseConfig.js";
-import { ref, get, set } from "firebase/database";
+//import { useEffect, useRef, useState } from "react";
+//import { db } from "../../config/firabaseConfig.js";
+//import { ref, get, set } from "firebase/database";
 
 const Contacto = () => {
-  const [visitCount, setVisitCount] = useState(0);
-  const divImgRef = useRef(null);
+ // const [visitCount, setVisitCount] = useState(0);
+  //const divImgRef = useRef(null);
 
   const FuncionDescargaCV = () => {
     const link = document.createElement("a");
@@ -19,7 +19,7 @@ const Contacto = () => {
   };
 
   // Incrementar el contador de visitas
-  useEffect(() => {
+/*   useEffect(() => {
     const visitRef = ref(db, "visitCount");
 
     get(visitRef).then((snapshot) => {
@@ -32,10 +32,10 @@ const Contacto = () => {
         setVisitCount(1);
       }
     });
-  }, []);
+  }, []); */
 
   // Efecto para detectar scroll y aplicar la animación
-  useEffect(() => {
+/*   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -59,7 +59,7 @@ const Contacto = () => {
         observer.unobserve(divImgRef.current);
       }
     };
-  }, []);
+  }, []); */
 
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -86,8 +86,8 @@ const Contacto = () => {
         </DivTexto>
         <Div3>
           Hecho con <IoIosHeart style={{ marginTop: "20px" }} /> 
-          <p>Visitas al sitio: {visitCount}</p>
-        </Div3>
+{/*           <p>Visitas al sitio: {visitCount}</p>
+ */}        </Div3>
         <BotonFlotante onClick={handleScrollToTop}>
           <IoIosArrowUp size={24} />
         </BotonFlotante>
