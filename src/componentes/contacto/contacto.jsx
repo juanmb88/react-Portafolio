@@ -3,13 +3,9 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { FaSquareJs } from "react-icons/fa6";
 import { IoLogoCss3, IoIosHeart, IoIosArrowUp } from "react-icons/io";
 import Particles from "../materialUI/particles.tsx";
-//import { useEffect, useRef, useState } from "react";
-//import { db } from "../../config/firabaseConfig.js";
-//import { ref, get, set } from "firebase/database";
 
 const Contacto = () => {
- // const [visitCount, setVisitCount] = useState(0);
-  //const divImgRef = useRef(null);
+
 
   const FuncionDescargaCV = () => {
     const link = document.createElement("a");
@@ -17,49 +13,6 @@ const Contacto = () => {
     link.download = "CV-Balugano-Juan.pdf";
     link.click();
   };
-
-  // Incrementar el contador de visitas
-/*   useEffect(() => {
-    const visitRef = ref(db, "visitCount");
-
-    get(visitRef).then((snapshot) => {
-      if (snapshot.exists()) {
-        const currentCount = snapshot.val();
-        setVisitCount(currentCount);
-        set(visitRef, currentCount + 1);
-      } else {
-        set(visitRef, 1);
-        setVisitCount(1);
-      }
-    });
-  }, []); */
-
-  // Efecto para detectar scroll y aplicar la animación
-/*   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    if (divImgRef.current) {
-      observer.observe(divImgRef.current);
-    }
-
-    return () => {
-      if (divImgRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(divImgRef.current);
-      }
-    };
-  }, []); */
 
   const handleScrollToTop = () => {
     window.scrollTo({
