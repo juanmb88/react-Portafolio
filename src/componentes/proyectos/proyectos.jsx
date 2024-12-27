@@ -57,7 +57,7 @@ const Proyectos = () => {
       description: "Implementación de sistema de ruteo basado en controladores, diseñado bajo arquitectura en capas, patrones DAO y Repository. Gestión y desarrollo de sesiones y sistema de envío de correos(mailing).",
       techs: [ "Express", "MongoDB", "NodeJS", "CSS3", "Bootstrap", "Javascripts"],
       imageSrc: "/image/pf-backend.webp",
-      websiteUrl: "https://pf-baluganojuan-production.up.railway.app/login",
+      websiteUrl: "https://pf-baluganojuan-production-2772.up.railway.app/login",
       repoUrl: "https://github.com/juanmb88/PF-BaluganoJuan",
     }
   ];
