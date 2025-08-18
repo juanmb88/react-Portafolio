@@ -9,8 +9,8 @@ const Contacto = () => {
 
   const FuncionDescargaCV = () => {
     const link = document.createElement("a");
-    link.href = "/assets/cv/CV-Balugano-Juan.pdf";
-    link.download = "CV-Balugano-Juan.pdf";
+    link.href = "/public/assets/cv/CV-BaluganoJuan.pdf";
+    link.download = "CV-BaluganoJuan.pdf";
     link.click();
   };
 
