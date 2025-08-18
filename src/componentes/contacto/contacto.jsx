@@ -7,12 +7,14 @@ import Particles from "../materialUI/particles.tsx";
 const Contacto = () => {
 
 
-  const FuncionDescargaCV = () => {
-    const link = document.createElement("a");
-    link.href = "/assets/CV-BaluganoJuan.pdf";
-    link.download = "CV-BaluganoJuan.pdf";
-    link.click();
-  };
+ const FuncionDescargaCV = () => {
+  const link = document.createElement("a");
+  link.href = "/assets/CV-BaluganoJuan.pdf"; // desde public/assets
+  link.download = "CV-BaluganoJuan.pdf";
+  document.body.appendChild(link); // opcional, garantiza compatibilidad
+  link.click();
+  document.body.removeChild(link);
+};
 
   const handleScrollToTop = () => {
     window.scrollTo({
