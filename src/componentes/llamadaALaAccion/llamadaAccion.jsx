@@ -4,8 +4,8 @@ const LlamadaAccion = () => {
   return (
     <ContenedorLlamadaAccion>
       <ColumnaIzquierda>
-        <TituloGrande>¿Trabajamos juntos?</TituloGrande>
-        <Subtitulo>¡Trabajemos juntos!</Subtitulo>
+        <TituloGrande>¿Tenés algo en mente?</TituloGrande>
+        <Subtitulo>Yo tengo las ganas y las herramientas.</Subtitulo>
       </ColumnaIzquierda>
 
       <ColumnaDerecha>

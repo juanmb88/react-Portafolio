@@ -5,27 +5,21 @@ const SobreMi = () => {
 
   return (
     <>
-  
     <Container id="sobre-mi">
-      <StyledH2  className=''>Sobre mi</StyledH2>
-     
+      <StyledH2>Sobre mi</StyledH2>
         <Box1>
             <Synopsis>
-            Tengo experiencia en la creación de sitios  web y aplicaciones web. Siempre buscando mejorar mis habilidades y conocimientos, descubrí mi pasión por la interactividad con el usuario, lo que me inclinó hacia un perfil más Frontend. 
+              Soy Juan Manuel, desarrollador Frontend con experiencia en la creación de sitios y aplicaciones web, y una marcada pasión por la interactividad y la experiencia del usuario. Me estoy formando como Analista Programador en la UAI y trabajo en Telecom Argentina, donde aplico mis conocimientos en AEM (Adobe Experience Manager) como content author, gestionando y publicando contenido en plataformas de gran escala.
               <SynopsisDos>
-            Con especial interés en JavaScript, he realizado capacitaciones donde aprendí desde heurísticas y normas al diseñar para relacionarme con clientes, hasta crear ecommerce con bases de datos y un backend dividido en capas, pruebas de estres con tests funcionales y de integracion.
+                Me muevo con comodidad en el ecosistema JavaScript y sigo ampliando mis horizontes de manera particular hacia el mundo Backend, capacitándome en Next.js y Nest.js para construir proyectos más robustos y completos. Siempre en movimiento, siempre aprendiendo.
               </SynopsisDos>
-              <SynopsisTres>
-              Hoy día, explorando Next.js, Nest.js capacitandome desde un lado Backend, con fin de proporcionar robustez, seguridad y flexibilidad a mis proyectos.
-              </SynopsisTres>
             </Synopsis>
         </Box1>
         <Box2>
             <IconCloudDemo/>
         </Box2>
-        
-    </Container> 
-     </>
+    </Container>  
+    </>
   );
 };
 
@@ -37,59 +31,50 @@ const Container = styled.header`
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat 200px 1fr;
 
-
-
-    
     @media (min-width: 460px) and (max-width: 900px) {
         display: flex;
         flex-direction: column;
     }
     
-    
     @media (max-width: 900px) {
         display: flex;
         flex-direction: column;
     }
-    
-    `;
+`;
 
-    const StyledH2  = styled.h2`
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      font-size: 50px;
-      font-weight:700;
-      background-clip: text;
-      color: #EB5B00;  
-      grid-column: 1/4;
-      margin: 40px;
-      
-      @media (min-width: 460px) and (max-width: 900px) {
-      font-size : 38px;
-      margin: 10px;
-      display: grid;
-     }
+const StyledH2 = styled.h2`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 700;
+  background-clip: text;
+  color: #EB5B00;  
+  grid-column: 1/4;
+  margin: 40px;
+  
+  @media (min-width: 460px) and (max-width: 900px) {
+    font-size: 38px;
+    margin: 10px;
+    display: grid;
+  }
 
-     @media (max-width: 460px)  {
+  @media (max-width: 460px) {
     font-size: 28px;
     display: flex;
     justify-content: start;
     align-items: center;
   }
-  
-     `;
+`;
 
 const Box1 = styled.div`
   grid-column: 1/3;
 
-
-
-@media (min-width: 460px) and (max-width: 900px) {
-
+  @media (min-width: 460px) and (max-width: 900px) {
     justify-items: center; 
     text-align: start;
     width: fit-content;
-    paddin: 50px;
+    padding: 50px;
   }
   @media (max-width: 460px) {
     display: flex;
@@ -97,26 +82,25 @@ const Box1 = styled.div`
     justify-content: center;
     align-items: start;
     margin: 20px;
-    
   }
-  @media (min-width: 900px){
+  @media (min-width: 900px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     margin: 20px;
   }
-  `;
+`;
 
- const Box2 = styled.div`
+const Box2 = styled.div`
   grid-column: 3/5;
   display: flex;
   justify-content: center; 
   align-items: start;
+`
 
- `
 const Synopsis = styled.div`
-  font-size: 24px;
+  font-size: 32px;
   margin: 5px;
   font-weight: 500;
   color: #ffffff;
@@ -124,18 +108,12 @@ const Synopsis = styled.div`
     color: #16528e; 
     text-decoration: none;
     font-weight: bold; 
-  
   }
 
   @media (min-width: 460px) and (max-width: 900px) {
-  font-weight: 500;
+    font-weight: 500;
   }
-
 `;
+
 const SynopsisDos = styled.p`
-
-`
-const SynopsisTres = styled.p`
-margin-bottom: 5px;
-
 `

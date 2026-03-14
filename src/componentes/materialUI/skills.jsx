@@ -12,9 +12,8 @@ const skills = [
     "mongodb",
     "firebase",
     "github",
-    "visualstudiocode",
     "npm",
-    "figma",
+    "figma"
   ];
  
 export function IconCloudDemo() {
