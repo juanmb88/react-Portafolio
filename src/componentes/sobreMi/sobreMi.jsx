@@ -112,8 +112,28 @@ const Synopsis = styled.div`
 
   @media (min-width: 460px) and (max-width: 900px) {
     font-weight: 500;
+    font-size: 18px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  @media (max-width: 460px) {
+    font-size: 16px;
+    text-align: justify;
+    hyphens: auto;
   }
 `;
 
 const SynopsisDos = styled.p`
+  @media (min-width: 460px) and (max-width: 900px) {
+    font-size: 18px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  @media (max-width: 460px) {
+    font-size: 16px;
+    text-align: justify;
+    hyphens: auto;
+  }
 `
