@@ -10,7 +10,7 @@ const Inicio = () => {
             <SpanHola>Hola! 👋 soy </SpanHola>
             <Nombre>Juan Manuel Balugano</Nombre>
             <WordRotates className="text-4xl font-bold text-black dark:text-white"
-                        words={["FrontEnd Developer Jr", "Diseño Ux", "Diseño UI", "Web Ecommerce"]}/> 
+                        words={["FrontEnd Developer", "Diseño Ux", "Diseño UI", "Web Ecommerce"]}/> 
 
         </Text>
             <StyledImage
